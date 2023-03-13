@@ -1,0 +1,32 @@
+<form class="container" [formGroup]="form">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>QUIZ ROCK'BAND</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <mat-card-subtitle>Regras</mat-card-subtitle>
+      <mat-divider></mat-divider>
+      <p>
+        - Cada pergunta correta +10 pontos <br>
+        - Cada pergunta errada -05 pontos <br>
+        - 30 segundos para responder cada pergunta <br>
+        - Passado 30 segundos e não responder perde -02 pontos <br>
+      </p>
+
+      <mat-form-field appearance="fill">
+        <mat-label >Digite seu nome</mat-label>
+        <input matInput formControlName="name">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onStart()">START</button>
+      </mat-card-actions>
+    </mat-card-content>
+
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</form>
